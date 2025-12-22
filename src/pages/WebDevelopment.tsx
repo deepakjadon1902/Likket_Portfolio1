@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Code, Globe, Smartphone, Database, Cloud, Shield, ArrowRight, CheckCircle } from "lucide-react";
+import { Code, Globe, Smartphone, Database, Cloud, Shield, ArrowRight } from "lucide-react";
 import webDevImg from "@/assets/web-dev.jpg";
+import ProjectCardStack from "@/components/ui/project-card-stack";
 
 const services = [
   {
@@ -43,22 +44,81 @@ const technologies = [
 
 const projects = [
   {
+    id: 1,
     title: "E-Commerce Platform",
     client: "Fashion Forward",
     description: "A complete e-commerce solution with 10,000+ products and seamless checkout.",
-    results: ["300% increase in online sales", "50% reduction in cart abandonment"],
+    fullDescription: "We developed a comprehensive e-commerce platform for Fashion Forward, one of India's leading fashion retailers. The platform features advanced product filtering, wishlist functionality, real-time inventory management, and a seamless checkout experience with multiple payment gateways including UPI, credit cards, and cash on delivery.",
+    image: webDevImg,
+    technologies: ["React", "Node.js", "PostgreSQL", "AWS", "Stripe", "Redis"],
+    results: [
+      "300% increase in online sales within 6 months",
+      "50% reduction in cart abandonment rate",
+      "99.9% uptime with zero downtime during sales events",
+      "2-second average page load time",
+    ],
+    link: "https://fashionforward.example.com",
   },
   {
-    title: "Corporate Website",
+    id: 2,
+    title: "Corporate Website Redesign",
     client: "TechStart India",
     description: "Modern corporate website with integrated CRM and lead management.",
-    results: ["200% increase in leads", "40% improvement in user engagement"],
+    fullDescription: "TechStart India approached us to completely redesign their outdated corporate website. We created a modern, professional design that reflects their innovative brand identity. The website includes an integrated CRM system, automated lead capture forms, and a comprehensive analytics dashboard for tracking visitor behavior.",
+    image: webDevImg,
+    technologies: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS", "HubSpot API"],
+    results: [
+      "200% increase in qualified leads",
+      "40% improvement in user engagement metrics",
+      "65% faster page load times compared to old site",
+      "SEO ranking improved from page 5 to page 1",
+    ],
+    link: "https://techstart.example.com",
   },
   {
-    title: "SaaS Dashboard",
+    id: 3,
+    title: "SaaS Analytics Dashboard",
     client: "GrowthHub",
     description: "Complex analytics dashboard with real-time data visualization.",
-    results: ["99.9% uptime", "5-second load time improvement"],
+    fullDescription: "GrowthHub needed a powerful analytics platform to help their clients track marketing performance. We built a sophisticated SaaS dashboard featuring real-time data visualization, custom report generation, automated alerts, and white-label capabilities. The platform processes millions of data points daily.",
+    image: webDevImg,
+    technologies: ["React", "D3.js", "Python", "FastAPI", "TimescaleDB", "Docker"],
+    results: [
+      "99.99% uptime since launch",
+      "5-second improvement in average load time",
+      "10x faster report generation than competitors",
+      "Serving 500+ enterprise clients globally",
+    ],
+  },
+  {
+    id: 4,
+    title: "Healthcare Portal",
+    client: "MediCare Plus",
+    description: "Secure patient portal with telemedicine and appointment booking.",
+    fullDescription: "We developed a HIPAA-compliant healthcare portal for MediCare Plus that enables patients to book appointments, conduct video consultations, access medical records, and manage prescriptions. The platform includes integration with major insurance providers and electronic health record systems.",
+    image: webDevImg,
+    technologies: ["Vue.js", "Node.js", "MongoDB", "WebRTC", "Twilio", "AWS"],
+    results: [
+      "70% reduction in appointment no-shows",
+      "50,000+ telemedicine consultations in first year",
+      "HIPAA compliant with zero security incidents",
+      "Patient satisfaction score of 4.8/5",
+    ],
+  },
+  {
+    id: 5,
+    title: "Real Estate Marketplace",
+    client: "PropertyHub",
+    description: "Property listing platform with virtual tours and mortgage calculator.",
+    fullDescription: "PropertyHub wanted to disrupt the traditional real estate market with a modern platform. We built a comprehensive marketplace featuring 360° virtual property tours, AI-powered property recommendations, integrated mortgage calculators, and direct messaging between buyers and agents.",
+    image: webDevImg,
+    technologies: ["Next.js", "Three.js", "Python", "TensorFlow", "PostgreSQL", "Mapbox"],
+    results: [
+      "1 million+ property listings",
+      "Average deal closure time reduced by 40%",
+      "2 million monthly active users",
+      "Featured in TechCrunch and Forbes India",
+    ],
   },
 ];
 
@@ -133,11 +193,27 @@ const WebDevelopment = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
+                whileHover={{ 
+                  y: -10,
+                  rotateY: 5,
+                  transition: { duration: 0.3 }
+                }}
                 className="card-premium p-6"
+                style={{
+                  transformStyle: "preserve-3d",
+                  perspective: "1000px",
+                }}
               >
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                  <service.icon className="w-6 h-6 text-accent" />
-                </div>
+                <motion.div 
+                  className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent to-highlight flex items-center justify-center mb-4"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  style={{
+                    boxShadow: "0 10px 30px -10px hsl(210 100% 45% / 0.4)",
+                  }}
+                >
+                  <service.icon className="w-7 h-7 text-accent-foreground" />
+                </motion.div>
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">
                   {service.title}
                 </h3>
@@ -172,7 +248,14 @@ const WebDevelopment = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="px-6 py-3 rounded-full bg-card border border-border text-foreground font-medium hover:bg-accent hover:text-accent-foreground transition-colors cursor-default"
+                whileHover={{ 
+                  scale: 1.1,
+                  y: -5,
+                }}
+                className="px-6 py-3 rounded-full bg-card border border-border text-foreground font-medium hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300 cursor-default"
+                style={{
+                  boxShadow: "0 4px 15px -3px hsl(215 50% 23% / 0.1)",
+                }}
               >
                 {tech}
               </motion.span>
@@ -181,7 +264,7 @@ const WebDevelopment = () => {
         </div>
       </section>
 
-      {/* Projects */}
+      {/* Projects - 3D Stacked Cards */}
       <section className="bg-card section-padding">
         <div className="container-max">
           <div className="text-center mb-16">
@@ -194,35 +277,13 @@ const WebDevelopment = () => {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
                 Featured Projects
               </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+                Click on a card to view project details, or cycle through our portfolio
+              </p>
             </motion.div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="card-premium p-6"
-              >
-                <div className="text-sm text-accent font-medium mb-2">{project.client}</div>
-                <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground mb-4">{project.description}</p>
-                <ul className="space-y-2">
-                  {project.results.map((result, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-foreground">
-                      <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
-                      {result}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
+          <ProjectCardStack projects={projects} />
         </div>
       </section>
 
