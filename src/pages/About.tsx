@@ -1,11 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Heart, Target, Rocket, Users, Award, Clock, ArrowRight } from "lucide-react";
-import AnimatedCardStack from "@/components/ui/animated-card-stack";
+import { Heart, Target, Rocket, Users, ArrowRight } from "lucide-react";
 import teamImg from "@/assets/team.jpg";
-import webDevImg from "@/assets/web-dev.jpg";
-import socialMediaImg from "@/assets/social-media.jpg";
-import digitalMarketingImg from "@/assets/digital-marketing.jpg";
 
 const values = [
   {
@@ -39,13 +35,6 @@ const timeline = [
   { year: "2024", title: "Excellence", description: "Serving 50+ satisfied clients across multiple countries." },
 ];
 
-const projectCards = [
-  { id: 1, title: "E-Commerce Platform", description: "Full-stack web development", image: webDevImg },
-  { id: 2, title: "Social Campaign", description: "Viral marketing strategy", image: socialMediaImg },
-  { id: 3, title: "Analytics Dashboard", description: "Digital marketing insights", image: digitalMarketingImg },
-  { id: 4, title: "Brand Identity", description: "Complete redesign", image: teamImg },
-];
-
 const About = () => {
   return (
     <div className="overflow-hidden">
@@ -70,25 +59,6 @@ const About = () => {
               </p>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Animated Cards Section */}
-      <section className="bg-card section-padding">
-        <div className="container-max">
-          <div className="text-center mb-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <span className="text-accent font-medium">Our Portfolio</span>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
-                Featured Projects
-              </h2>
-            </motion.div>
-          </div>
-          <AnimatedCardStack cards={projectCards} />
         </div>
       </section>
 
