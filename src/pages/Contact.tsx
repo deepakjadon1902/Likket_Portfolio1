@@ -1,8 +1,8 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin, Clock, Send, Globe, Share2, BarChart3, Youtube, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import AnimatedCardStack from "@/components/ui/animated-card-stack";
 import webDevImg from "@/assets/web-dev.jpg";
 import socialMediaImg from "@/assets/social-media.jpg";
 import digitalMarketingImg from "@/assets/digital-marketing.jpg";
@@ -31,11 +31,39 @@ const contactInfo = [
   },
 ];
 
-const serviceCards = [
-  { id: 1, title: "Web Development", description: "Custom websites & apps", image: webDevImg },
-  { id: 2, title: "Social Media", description: "Marketing strategies", image: socialMediaImg },
-  { id: 3, title: "Digital Marketing", description: "Growth solutions", image: digitalMarketingImg },
-  { id: 4, title: "Video Production", description: "YouTube content", image: youtubeImg },
+const services = [
+  { 
+    id: 1, 
+    title: "Web Development", 
+    description: "Custom websites & apps", 
+    image: webDevImg, 
+    link: "/web-development",
+    icon: Globe
+  },
+  { 
+    id: 2, 
+    title: "Social Media", 
+    description: "Marketing strategies", 
+    image: socialMediaImg, 
+    link: "/social-media-marketing",
+    icon: Share2
+  },
+  { 
+    id: 3, 
+    title: "Digital Marketing", 
+    description: "Growth solutions", 
+    image: digitalMarketingImg, 
+    link: "/digital-marketing",
+    icon: BarChart3
+  },
+  { 
+    id: 4, 
+    title: "YouTube", 
+    description: "Video content & reviews", 
+    image: youtubeImg, 
+    link: "/youtube",
+    icon: Youtube
+  },
 ];
 
 const Contact = () => {
@@ -109,7 +137,47 @@ const Contact = () => {
               </h2>
             </motion.div>
           </div>
-          <AnimatedCardStack cards={serviceCards} />
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="card-premium overflow-hidden h-full flex flex-col">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-5 flex flex-col flex-1">
+                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-3">
+                      <service.icon className="w-5 h-5 text-accent" />
+                    </div>
+                    <h3 className="font-display text-lg font-semibold text-foreground mb-1">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mb-4 flex-1">
+                      {service.description}
+                    </p>
+                    <Link
+                      to={service.link}
+                      className="inline-flex items-center gap-2 text-accent font-medium text-sm hover:gap-3 transition-all"
+                    >
+                      View Details
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
