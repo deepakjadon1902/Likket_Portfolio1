@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Heart, Target, Rocket, Users, ArrowRight } from "lucide-react";
+import { LampContainer } from "@/components/ui/lamp-effect";
 import teamImg from "@/assets/team.jpg";
 
 const values = [
@@ -38,29 +39,30 @@ const timeline = [
 const About = () => {
   return (
     <div className="overflow-hidden">
-      {/* Hero Section */}
-      <section className="hero-gradient section-padding pt-32">
-        <div className="container-max">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-6">
-                About Liklet
-              </span>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-                Welcome to Liklet
-                <span className="block text-highlight mt-2">Where Innovation Meets Excellence</span>
-              </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto">
-                We are more than a digital agency – we are your partners in growth. At Liklet, we blend creativity, technology, and strategy to create digital experiences that inspire and deliver results.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section with Lamp Effect */}
+      <LampContainer className="pt-20">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="text-center"
+        >
+          <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-6">
+            About Liklet
+          </span>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground mb-6 bg-gradient-to-b from-primary-foreground to-primary-foreground/60 bg-clip-text text-transparent">
+            Welcome to Liklet
+            <span className="block text-highlight mt-2">Where Innovation Meets Excellence</span>
+          </h1>
+          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto">
+            We are more than a digital agency – we are your partners in growth. At Liklet, we blend creativity, technology, and strategy to create digital experiences that inspire and deliver results.
+          </p>
+        </motion.div>
+      </LampContainer>
 
       {/* Our Story */}
       <section className="section-gradient section-padding">
