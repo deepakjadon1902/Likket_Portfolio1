@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Code, Globe, Smartphone, Database, Cloud, Shield, ArrowRight } from "lucide-react";
+import { Code, Globe, Smartphone, Database, Cloud, Shield, ArrowRight, Star, Quote, Layout, Server, Layers, FileCode, Palette, Monitor } from "lucide-react";
 import webDevImg from "@/assets/web-dev.jpg";
 import ProjectCardStack from "@/components/ui/project-card-stack";
 
@@ -37,9 +37,64 @@ const services = [
   },
 ];
 
+const projectTypes = [
+  {
+    icon: Layout,
+    title: "Frontend Development",
+    description: "Beautiful, interactive user interfaces with React, Vue, or Angular.",
+    features: ["Responsive UI Design", "Animation & Interactions", "Performance Optimization", "Cross-browser Compatibility"],
+  },
+  {
+    icon: Server,
+    title: "Backend Development",
+    description: "Robust server-side solutions with Node.js, Python, or PHP.",
+    features: ["RESTful & GraphQL APIs", "Database Design", "Authentication Systems", "Cloud Deployment"],
+  },
+  {
+    icon: Layers,
+    title: "Full Stack Development",
+    description: "Complete end-to-end web applications from frontend to backend.",
+    features: ["Complete Web Apps", "Real-time Features", "Third-party Integrations", "Scalable Architecture"],
+  },
+  {
+    icon: FileCode,
+    title: "Landing Pages",
+    description: "High-converting landing pages optimized for lead generation.",
+    features: ["A/B Testing Ready", "Fast Load Times", "SEO Optimized", "Analytics Integration"],
+  },
+  {
+    icon: Palette,
+    title: "Portfolio Websites",
+    description: "Stunning portfolio sites that showcase your work professionally.",
+    features: ["Custom Animations", "Gallery Systems", "Contact Forms", "Blog Integration"],
+  },
+  {
+    icon: Monitor,
+    title: "Business Websites",
+    description: "Professional corporate websites that build trust and credibility.",
+    features: ["Multi-page Layouts", "Team Sections", "Service Pages", "Testimonial Display"],
+  },
+];
+
 const technologies = [
-  "React", "Next.js", "Vue.js", "Angular", "Node.js", "Python",
-  "TypeScript", "PostgreSQL", "MongoDB", "AWS", "Tailwind CSS", "WordPress",
+  { name: "React", category: "Frontend" },
+  { name: "Next.js", category: "Frontend" },
+  { name: "Vue.js", category: "Frontend" },
+  { name: "Angular", category: "Frontend" },
+  { name: "TypeScript", category: "Language" },
+  { name: "Node.js", category: "Backend" },
+  { name: "Python", category: "Backend" },
+  { name: "Django", category: "Backend" },
+  { name: "Express.js", category: "Backend" },
+  { name: "PostgreSQL", category: "Database" },
+  { name: "MongoDB", category: "Database" },
+  { name: "Redis", category: "Database" },
+  { name: "AWS", category: "Cloud" },
+  { name: "Docker", category: "DevOps" },
+  { name: "Tailwind CSS", category: "Styling" },
+  { name: "WordPress", category: "CMS" },
+  { name: "Shopify", category: "E-Commerce" },
+  { name: "Firebase", category: "Cloud" },
 ];
 
 const projects = [
@@ -122,6 +177,64 @@ const projects = [
   },
 ];
 
+const customerReviews = [
+  {
+    name: "Rajesh Sharma",
+    company: "TechStart India",
+    role: "CEO",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+    rating: 5,
+    review: "Liklet transformed our entire digital presence. The new website increased our leads by 200% and the team was incredibly professional throughout the process. Highly recommended!",
+  },
+  {
+    name: "Priya Patel",
+    company: "Fashion Forward",
+    role: "Marketing Director",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
+    rating: 5,
+    review: "The e-commerce platform they built for us is phenomenal. Our online sales have tripled since launch. The attention to detail and user experience is outstanding.",
+  },
+  {
+    name: "Amit Kumar",
+    company: "GrowthHub",
+    role: "Founder & CTO",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+    rating: 5,
+    review: "Working with Liklet on our SaaS dashboard was a game-changer. They understood our complex requirements and delivered a product that exceeded our expectations.",
+  },
+  {
+    name: "Dr. Sneha Reddy",
+    company: "MediCare Plus",
+    role: "Chief Medical Officer",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face",
+    rating: 5,
+    review: "The healthcare portal has revolutionized how we interact with patients. It's secure, user-friendly, and has significantly improved our operational efficiency.",
+  },
+  {
+    name: "Vikram Singh",
+    company: "PropertyHub",
+    role: "Co-Founder",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    rating: 5,
+    review: "Liklet's technical expertise is unmatched. They built us a platform that handles millions of users without breaking a sweat. Best investment we've ever made.",
+  },
+  {
+    name: "Ananya Gupta",
+    company: "EduTech Pro",
+    role: "Product Manager",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+    rating: 5,
+    review: "From concept to launch, Liklet was with us every step of the way. Their communication is excellent and they always deliver on time. True professionals!",
+  },
+];
+
+const stats = [
+  { value: "150+", label: "Projects Completed" },
+  { value: "50+", label: "Happy Clients" },
+  { value: "4.9", label: "Average Rating" },
+  { value: "99%", label: "Client Satisfaction" },
+];
+
 const WebDevelopment = () => {
   return (
     <div className="overflow-hidden">
@@ -144,6 +257,20 @@ const WebDevelopment = () => {
               <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
                 From simple websites to complex web applications, our expert developers create solutions that drive results and exceed expectations.
               </p>
+              <div className="flex flex-wrap gap-4 mb-8">
+                {stats.map((stat, index) => (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 + index * 0.1 }}
+                    className="text-center"
+                  >
+                    <div className="text-2xl md:text-3xl font-bold text-highlight">{stat.value}</div>
+                    <div className="text-sm text-primary-foreground/70">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </div>
               <Link to="/contact" className="btn-accent">
                 Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -166,8 +293,64 @@ const WebDevelopment = () => {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Project Types */}
       <section className="bg-card section-padding">
+        <div className="container-max">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-accent font-medium">What We Build</span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
+                Types of Projects We Work On
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+                From simple landing pages to complex enterprise applications, we handle it all.
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projectTypes.map((type, index) => (
+              <motion.div
+                key={type.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+                className="card-premium p-6 group"
+              >
+                <motion.div 
+                  className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent to-highlight flex items-center justify-center mb-4"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  style={{ boxShadow: "0 10px 30px -10px hsl(210 100% 45% / 0.4)" }}
+                >
+                  <type.icon className="w-7 h-7 text-accent-foreground" />
+                </motion.div>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                  {type.title}
+                </h3>
+                <p className="text-muted-foreground mb-4">{type.description}</p>
+                <ul className="space-y-2">
+                  {type.features.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm text-foreground/80">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="section-gradient section-padding">
         <div className="container-max">
           <div className="text-center mb-16">
             <motion.div
@@ -225,7 +408,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Technologies */}
-      <section className="section-gradient section-padding">
+      <section className="bg-card section-padding">
         <div className="container-max">
           <div className="text-center mb-12">
             <motion.div
@@ -235,30 +418,91 @@ const WebDevelopment = () => {
             >
               <span className="text-accent font-medium">Technologies</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
-                Technologies We Use
+                Technologies We Master
               </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+                We use the latest and most reliable technologies to build your projects.
+              </p>
             </motion.div>
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech, index) => (
-              <motion.span
-                key={tech}
+              <motion.div
+                key={tech.name}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.05 }}
+                transition={{ delay: index * 0.03 }}
                 viewport={{ once: true }}
                 whileHover={{ 
                   scale: 1.1,
                   y: -5,
                 }}
-                className="px-6 py-3 rounded-full bg-card border border-border text-foreground font-medium hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300 cursor-default"
-                style={{
-                  boxShadow: "0 4px 15px -3px hsl(215 50% 23% / 0.1)",
-                }}
+                className="group relative"
               >
-                {tech}
-              </motion.span>
+                <span 
+                  className="px-6 py-3 rounded-full bg-background border border-border text-foreground font-medium hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300 cursor-default inline-block"
+                  style={{ boxShadow: "0 4px 15px -3px hsl(215 50% 23% / 0.1)" }}
+                >
+                  {tech.name}
+                </span>
+                <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-primary text-primary-foreground text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  {tech.category}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Reviews */}
+      <section className="section-gradient section-padding">
+        <div className="container-max">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-accent font-medium">Testimonials</span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
+                What Our Clients Say
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+                Don't just take our word for it - hear from our satisfied clients.
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {customerReviews.map((review, index) => (
+              <motion.div
+                key={review.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="card-premium p-6 relative"
+              >
+                <Quote className="absolute top-4 right-4 w-8 h-8 text-accent/20" />
+                <div className="flex items-center gap-4 mb-4">
+                  <img
+                    src={review.image}
+                    alt={review.name}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-accent"
+                  />
+                  <div>
+                    <h4 className="font-semibold text-foreground">{review.name}</h4>
+                    <p className="text-sm text-muted-foreground">{review.role}, {review.company}</p>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-3">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-highlight text-highlight" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground italic">"{review.review}"</p>
+              </motion.div>
             ))}
           </div>
         </div>
