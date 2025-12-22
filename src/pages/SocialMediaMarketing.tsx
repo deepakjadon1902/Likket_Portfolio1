@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Users, Heart, Share2, MessageCircle, TrendingUp, Camera, ArrowRight, CheckCircle } from "lucide-react";
+import { Users, Heart, Share2, MessageCircle, TrendingUp, Camera, ArrowRight, CheckCircle, Star, Quote, Zap, Target, BarChart3 } from "lucide-react";
 import socialMediaImg from "@/assets/social-media.jpg";
 
 const services = [
@@ -40,6 +40,27 @@ const platforms = [
   "Facebook", "Instagram", "Twitter/X", "LinkedIn", "YouTube", "Pinterest", "TikTok", "WhatsApp Business",
 ];
 
+const workTypes = [
+  {
+    icon: Zap,
+    title: "Brand Awareness Campaigns",
+    description: "Build recognition and reach new audiences with viral content strategies.",
+    features: ["Hashtag Campaigns", "Brand Storytelling", "Viral Content Creation", "Trend Jacking"],
+  },
+  {
+    icon: Target,
+    title: "Lead Generation",
+    description: "Convert followers into customers with targeted social campaigns.",
+    features: ["Lead Magnets", "Social Funnels", "Retargeting Ads", "Landing Page Integration"],
+  },
+  {
+    icon: BarChart3,
+    title: "Performance Marketing",
+    description: "Data-driven campaigns optimized for maximum ROI.",
+    features: ["A/B Testing", "Conversion Tracking", "ROAS Optimization", "Detailed Reporting"],
+  },
+];
+
 const caseStudies = [
   {
     title: "Fashion Brand Launch",
@@ -59,6 +80,48 @@ const caseStudies = [
     description: "B2B social media marketing for a SaaS startup.",
     results: ["300 qualified leads", "25% increase in demo requests", "Industry influencer partnerships"],
   },
+];
+
+const customerReviews = [
+  {
+    name: "Neha Sharma",
+    company: "StyleHub",
+    role: "Brand Manager",
+    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face",
+    rating: 5,
+    review: "Liklet's social media strategy was exactly what we needed for our brand launch. The results exceeded all our expectations with incredible engagement rates.",
+  },
+  {
+    name: "Rahul Verma",
+    company: "FoodiesDelight",
+    role: "Marketing Head",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
+    rating: 5,
+    review: "Our social media presence has never been better. The team understands our brand voice perfectly and creates content that our customers love.",
+  },
+  {
+    name: "Kavita Nair",
+    company: "BeautyBliss",
+    role: "Founder",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
+    rating: 5,
+    review: "Working with Liklet transformed our Instagram presence. We went from 5K to 100K followers in just 8 months with genuine engagement.",
+  },
+  {
+    name: "Sanjay Mehta",
+    company: "InnovateTech",
+    role: "CEO",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face",
+    rating: 5,
+    review: "Their B2B social strategy is outstanding. We've generated more quality leads through LinkedIn than any other channel.",
+  },
+];
+
+const stats = [
+  { value: "10M+", label: "Impressions Generated" },
+  { value: "500K+", label: "Followers Grown" },
+  { value: "25%", label: "Avg Engagement Rate" },
+  { value: "95%", label: "Client Retention" },
 ];
 
 const SocialMediaMarketing = () => {
@@ -83,6 +146,20 @@ const SocialMediaMarketing = () => {
               <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
                 Strategic social media marketing that builds engaged communities, increases brand awareness, and drives measurable business results.
               </p>
+              <div className="flex flex-wrap gap-4 mb-8">
+                {stats.map((stat, index) => (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 + index * 0.1 }}
+                    className="text-center"
+                  >
+                    <div className="text-2xl md:text-3xl font-bold text-highlight">{stat.value}</div>
+                    <div className="text-sm text-primary-foreground/70">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </div>
               <Link to="/contact" className="btn-accent">
                 Boost Your Social Presence
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -105,8 +182,63 @@ const SocialMediaMarketing = () => {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Work Types */}
       <section className="bg-card section-padding">
+        <div className="container-max">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-accent font-medium">What We Do</span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
+                Types of Campaigns We Run
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+                From brand awareness to lead generation, we've got you covered.
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {workTypes.map((type, index) => (
+              <motion.div
+                key={type.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+                className="card-premium p-6"
+              >
+                <motion.div 
+                  className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent to-highlight flex items-center justify-center mb-4"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <type.icon className="w-7 h-7 text-accent-foreground" />
+                </motion.div>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                  {type.title}
+                </h3>
+                <p className="text-muted-foreground mb-4">{type.description}</p>
+                <ul className="space-y-2">
+                  {type.features.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm text-foreground/80">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="section-gradient section-padding">
         <div className="container-max">
           <div className="text-center mb-16">
             <motion.div
@@ -132,6 +264,7 @@ const SocialMediaMarketing = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
+                whileHover={{ y: -10 }}
                 className="card-premium p-6"
               >
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
@@ -148,7 +281,7 @@ const SocialMediaMarketing = () => {
       </section>
 
       {/* Platforms */}
-      <section className="section-gradient section-padding">
+      <section className="bg-card section-padding">
         <div className="container-max">
           <div className="text-center mb-12">
             <motion.div
@@ -171,10 +304,64 @@ const SocialMediaMarketing = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="px-6 py-3 rounded-full bg-card border border-border text-foreground font-medium hover:bg-accent hover:text-accent-foreground transition-colors cursor-default"
+                whileHover={{ scale: 1.1, y: -5 }}
+                className="px-6 py-3 rounded-full bg-background border border-border text-foreground font-medium hover:bg-accent hover:text-accent-foreground transition-colors cursor-default"
               >
                 {platform}
               </motion.span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Reviews */}
+      <section className="section-gradient section-padding">
+        <div className="container-max">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-accent font-medium">Testimonials</span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
+                Client Reviews & Ratings
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+                See what our clients say about our social media marketing services.
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {customerReviews.map((review, index) => (
+              <motion.div
+                key={review.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="card-premium p-5 relative"
+              >
+                <Quote className="absolute top-3 right-3 w-6 h-6 text-accent/20" />
+                <div className="flex items-center gap-3 mb-3">
+                  <img
+                    src={review.image}
+                    alt={review.name}
+                    className="w-12 h-12 rounded-full object-cover border-2 border-accent"
+                  />
+                  <div>
+                    <h4 className="font-semibold text-foreground text-sm">{review.name}</h4>
+                    <p className="text-xs text-muted-foreground">{review.company}</p>
+                  </div>
+                </div>
+                <div className="flex gap-0.5 mb-2">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-highlight text-highlight" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground text-sm italic">"{review.review}"</p>
+              </motion.div>
             ))}
           </div>
         </div>
