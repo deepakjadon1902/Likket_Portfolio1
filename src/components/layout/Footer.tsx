@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -32,9 +32,6 @@ const Footer = () => {
               <a href="#" className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-accent transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-accent transition-colors">
-                <Youtube className="w-5 h-5" />
-              </a>
             </div>
           </div>
 
@@ -65,11 +62,6 @@ const Footer = () => {
               <li>
                 <Link to="/digital-marketing" className="text-primary-foreground/80 hover:text-accent transition-colors">
                   Digital Marketing
-                </Link>
-              </li>
-              <li>
-                <Link to="/youtube" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                  YouTube Channel
                 </Link>
               </li>
             </ul>

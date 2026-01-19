@@ -13,7 +13,6 @@ const navLinks = [
       { name: "Digital Marketing", path: "/digital-marketing" },
     ],
   },
-  { name: "YouTube", path: "/youtube" },
   { name: "About Us", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
