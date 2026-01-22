@@ -7,32 +7,32 @@ const services = [
   {
     icon: Users,
     title: "Social Media Management",
-    description: "Complete management of your social media profiles across all platforms.",
+    description: "We handle everything — posting, replying to comments, and keeping your profiles active so you don't have to.",
   },
   {
     icon: Heart,
     title: "Content Creation",
-    description: "Engaging posts, graphics, and videos that resonate with your audience.",
+    description: "No more staring at a blank screen. We create posts, graphics, and videos that your audience actually wants to see.",
   },
   {
     icon: Share2,
-    title: "Influencer Marketing",
-    description: "Strategic partnerships with influencers to amplify your brand reach.",
+    title: "Influencer Partnerships",
+    description: "Connect with the right voices in your industry to reach new audiences who already trust them.",
   },
   {
     icon: MessageCircle,
-    title: "Community Management",
-    description: "Building and nurturing your online community for lasting engagement.",
+    title: "Community Building",
+    description: "Turn casual followers into loyal fans who advocate for your brand and come back again and again.",
   },
   {
     icon: TrendingUp,
-    title: "Social Analytics",
-    description: "Data-driven insights to optimize your social media strategy.",
+    title: "Performance Tracking",
+    description: "See exactly what's working with clear reports — not vanity metrics, but real business results.",
   },
   {
     icon: Camera,
     title: "Social Advertising",
-    description: "Targeted ad campaigns on Facebook, Instagram, LinkedIn, and more.",
+    description: "Reach people who are actually interested in what you offer, not just random scrollers.",
   },
 ];
 
@@ -43,21 +43,21 @@ const platforms = [
 const workTypes = [
   {
     icon: Zap,
-    title: "Brand Awareness Campaigns",
-    description: "Build recognition and reach new audiences with viral content strategies.",
-    features: ["Hashtag Campaigns", "Brand Storytelling", "Viral Content Creation", "Trend Jacking"],
+    title: "Brand Awareness",
+    description: "Get your name out there. We help people discover your business and remember you.",
+    features: ["Shareable Content", "Brand Storytelling", "Hashtag Strategies", "Trend Participation"],
   },
   {
     icon: Target,
     title: "Lead Generation",
-    description: "Convert followers into customers with targeted social campaigns.",
-    features: ["Lead Magnets", "Social Funnels", "Retargeting Ads", "Landing Page Integration"],
+    description: "Turn followers into customers with content that makes them want to take action.",
+    features: ["Valuable Free Offers", "Sales Funnels", "Retargeting Campaigns", "Direct Response Ads"],
   },
   {
     icon: BarChart3,
-    title: "Performance Marketing",
-    description: "Data-driven campaigns optimized for maximum ROI.",
-    features: ["A/B Testing", "Conversion Tracking", "ROAS Optimization", "Detailed Reporting"],
+    title: "Performance Campaigns",
+    description: "Every rupee tracked. We show you exactly what your social media investment returns.",
+    features: ["Split Testing", "Conversion Tracking", "ROI Reports", "Monthly Strategy Calls"],
   },
 ];
 
@@ -65,20 +65,20 @@ const caseStudies = [
   {
     title: "Fashion Brand Launch",
     client: "StyleHub",
-    description: "Complete social media strategy for a new fashion brand launch.",
-    results: ["500K+ impressions in first month", "200% growth in followers", "15% engagement rate"],
+    description: "A new fashion brand with zero following. We built their social presence from scratch.",
+    results: ["500K+ people reached in month one", "10,000 new followers", "15% of followers became buyers"],
   },
   {
     title: "Restaurant Chain",
     client: "FoodiesDelight",
-    description: "Social media management for a multi-location restaurant chain.",
-    results: ["50% increase in foot traffic", "10K+ user-generated content", "35% boost in orders"],
+    description: "Multiple locations but empty tables. Social media brought customers through the door.",
+    results: ["50% more walk-in customers", "10K+ posts from happy diners", "35% increase in orders"],
   },
   {
-    title: "Tech Startup",
+    title: "B2B Tech Startup",
     client: "InnovateTech",
-    description: "B2B social media marketing for a SaaS startup.",
-    results: ["300 qualified leads", "25% increase in demo requests", "Industry influencer partnerships"],
+    description: "Selling software is hard. We made LinkedIn work for lead generation.",
+    results: ["300 qualified sales leads", "25% more demo requests", "Partnerships with industry influencers"],
   },
 ];
 
@@ -137,14 +137,14 @@ const SocialMediaMarketing = () => {
               transition={{ duration: 0.8 }}
             >
               <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-6">
-                Social Media Marketing
+                For Busy Business Owners
               </span>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-                Grow Your Brand
-                <span className="block text-highlight">On Social Media</span>
+                Social Media That
+                <span className="block text-highlight">Actually Sells</span>
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
-                Strategic social media marketing that builds engaged communities, increases brand awareness, and drives measurable business results.
+                You know you should be posting more, but who has the time? We take social media off your plate completely — creating content, growing your following, and turning followers into paying customers.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 {stats.map((stat, index) => (
@@ -421,10 +421,10 @@ const SocialMediaMarketing = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Ready to Dominate Social Media?
+              Stop Struggling With Social Media
             </h2>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-              Let's create a social media strategy that drives engagement and growth.
+              Let's talk about what's not working and how we can fix it. Free consultation, no pressure.
             </p>
             <Link
               to="/contact"

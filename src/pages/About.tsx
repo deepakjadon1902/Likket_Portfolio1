@@ -7,33 +7,33 @@ import teamImg from "@/assets/team.jpg";
 const values = [
   {
     icon: Heart,
-    title: "Passion",
-    description: "We pour our heart into every project, treating each client's vision as our own.",
+    title: "Honesty First",
+    description: "We tell you what works and what doesn't — even if it means less work for us.",
   },
   {
     icon: Target,
-    title: "Excellence",
-    description: "We strive for perfection in every detail, delivering work that exceeds expectations.",
+    title: "Results Over Vanity",
+    description: "We measure success by your business growth, not just likes and clicks.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "We believe in working closely with our clients to achieve shared success.",
+    title: "True Partnership",
+    description: "Your goals become our goals. We succeed only when you succeed.",
   },
   {
     icon: Rocket,
-    title: "Innovation",
-    description: "We embrace new technologies and creative approaches to solve complex challenges.",
+    title: "Keep It Simple",
+    description: "No confusing tech talk. We explain everything in plain language you can understand.",
   },
 ];
 
 const timeline = [
-  { year: "2019", title: "Founded", description: "Liklet was born with a vision to transform digital experiences." },
-  { year: "2020", title: "Growth", description: "Expanded our team and services to serve diverse industries." },
-  { year: "2021", title: "Recognition", description: "Awarded for excellence in digital marketing and web development." },
-  { year: "2022", title: "Expansion", description: "Launched social media marketing and YouTube content services." },
-  { year: "2023", title: "Innovation", description: "Introduced cutting-edge AI-powered solutions for clients." },
-  { year: "2024", title: "Excellence", description: "Serving 50+ satisfied clients across multiple countries." },
+  { year: "2019", title: "The Beginning", description: "Started with one goal: help small businesses compete online against bigger competitors." },
+  { year: "2020", title: "Growing Together", description: "Expanded our services based on what our clients actually needed — not what we wanted to sell." },
+  { year: "2021", title: "Recognition", description: "Our clients' success stories started spreading — new businesses found us through referrals." },
+  { year: "2022", title: "Full Service", description: "Built a complete team covering web, social media, and marketing — everything under one roof." },
+  { year: "2023", title: "Embracing AI", description: "Started using smart tools to get better results faster and at lower costs for our clients." },
+  { year: "2024", title: "50+ Happy Clients", description: "Now serving businesses across India and internationally — from local shops to tech startups." },
 ];
 
 const About = () => {
@@ -52,14 +52,14 @@ const About = () => {
           className="text-center"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-6">
-            About Liklet
+            Our Story
           </span>
           <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground mb-6 bg-gradient-to-b from-primary-foreground to-primary-foreground/60 bg-clip-text text-transparent">
-            Welcome to Liklet
-            <span className="block text-highlight mt-2">Where Innovation Meets Excellence</span>
+            We Help Small Businesses
+            <span className="block text-highlight mt-2">Win Big Online</span>
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto">
-            We are more than a digital agency – we are your partners in growth. At Liklet, we blend creativity, technology, and strategy to create digital experiences that inspire and deliver results.
+            Too many small businesses struggle to be seen online while big companies dominate. We believe that's not fair — and we're here to change it. At Liklet, we give growing businesses the same digital tools and strategies that big brands use.
           </p>
         </motion.div>
       </LampContainer>
@@ -74,19 +74,19 @@ const About = () => {
               viewport={{ once: true }}
               className="order-2 lg:order-1"
             >
-              <span className="text-accent font-medium">Our Story</span>
+              <span className="text-accent font-medium">Why We Started</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-                The Journey of Liklet
+                Built From Frustration
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Liklet was founded in 2019 with a simple yet powerful vision: to help businesses thrive in the digital age. What started as a small team of passionate developers and marketers has grown into a full-service digital agency serving clients across the globe.
+                  We started Liklet in 2019 because we saw too many small business owners getting ripped off by digital agencies. They'd pay thousands for websites that didn't bring customers, or social media services that just posted random content.
                 </p>
                 <p>
-                  Our name "Liklet" represents the connection we create – like a thread that weaves together creativity, technology, and business success. We believe that every business deserves a strong digital presence, and we're here to make that happen.
+                  Our founders came from backgrounds in tech and marketing, and we knew there had to be a better way. A way that focused on what actually matters: getting real customers through the door (or to your website).
                 </p>
                 <p>
-                  Today, we're proud to have helped over 50 businesses transform their digital presence, increase their online visibility, and achieve measurable growth. Our team combines years of expertise with a relentless pursuit of innovation.
+                  Today, we work with startups, local businesses, and entrepreneurs across India and beyond. We're not the biggest agency — and we don't want to be. We'd rather do great work for clients we genuinely care about than chase numbers.
                 </p>
               </div>
             </motion.div>
@@ -123,7 +123,7 @@ const About = () => {
               </div>
               <h3 className="font-display text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground">
-                To empower businesses with innovative digital solutions that drive growth, enhance brand visibility, and create meaningful connections with their audience. We are committed to delivering excellence in every project we undertake.
+                To give small businesses and startups the same digital advantages that big companies have — without the big price tag or confusing jargon. We want every business owner to understand exactly what we're doing and why it works.
               </p>
             </motion.div>
             <motion.div
@@ -138,7 +138,7 @@ const About = () => {
               </div>
               <h3 className="font-display text-2xl font-bold text-foreground mb-4">Our Vision</h3>
               <p className="text-muted-foreground">
-                To be the most trusted digital partner for businesses worldwide, known for our creativity, technical expertise, and unwavering commitment to client success. We envision a world where every business can thrive in the digital landscape.
+                A world where business success isn't determined by marketing budget size. Where a local bakery can compete with a franchise chain online. Where good products and services get the visibility they deserve.
               </p>
             </motion.div>
           </div>
@@ -154,9 +154,9 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-accent font-medium">Our Values</span>
+              <span className="text-accent font-medium">How We Work</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
-                What Drives Us
+                What We Stand For
               </h2>
             </motion.div>
           </div>
@@ -253,16 +253,16 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Ready to Start Your Journey With Us?
+              Let's Talk About Your Business
             </h2>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-              Let's create something amazing together. Contact us today to discuss your project.
+              No sales pitch. No pressure. Just an honest conversation about where you are, where you want to be, and how we might help you get there.
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-primary-foreground text-primary font-medium hover:scale-105 transition-transform"
             >
-              Get in Touch
+              Book a Free Call
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>

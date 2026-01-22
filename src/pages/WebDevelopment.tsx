@@ -7,33 +7,33 @@ import ProjectCardStack from "@/components/ui/project-card-stack";
 const services = [
   {
     icon: Globe,
-    title: "Website Development",
-    description: "Custom websites that are visually stunning, fast-loading, and SEO-optimized.",
+    title: "Business Websites",
+    description: "A professional website that makes visitors trust you — fast, mobile-friendly, and built to turn browsers into buyers.",
   },
   {
     icon: Smartphone,
-    title: "Responsive Design",
-    description: "Mobile-first designs that look perfect on all devices and screen sizes.",
+    title: "Mobile-First Design",
+    description: "Most people browse on their phones. We make sure your site looks and works perfectly on every screen size.",
   },
   {
     icon: Code,
-    title: "Web Applications",
-    description: "Complex web applications with modern frameworks and technologies.",
+    title: "Custom Applications",
+    description: "Need something specific? We build custom tools that solve your exact business problems.",
   },
   {
     icon: Database,
-    title: "CMS Development",
-    description: "Content management systems that make updating your site a breeze.",
+    title: "Easy Content Updates",
+    description: "Update your website yourself — no tech skills needed. We set you up with simple tools you'll actually use.",
   },
   {
     icon: Cloud,
-    title: "E-Commerce Solutions",
-    description: "Online stores with secure payment integration and inventory management.",
+    title: "Online Stores",
+    description: "Sell products online with secure checkout. We handle the technical stuff so you can focus on selling.",
   },
   {
     icon: Shield,
-    title: "Maintenance & Support",
-    description: "Ongoing support, updates, and security monitoring for your website.",
+    title: "Ongoing Support",
+    description: "Websites need care. We keep yours secure, updated, and running smoothly so you don't have to worry.",
   },
 ];
 
@@ -41,38 +41,38 @@ const projectTypes = [
   {
     icon: Layout,
     title: "Frontend Development",
-    description: "Beautiful, interactive user interfaces with React, Vue, or Angular.",
-    features: ["Responsive UI Design", "Animation & Interactions", "Performance Optimization", "Cross-browser Compatibility"],
+    description: "The part your customers see. We make it beautiful, fast, and easy to use.",
+    features: ["Clean, Modern Design", "Smooth Animations", "Fast Loading", "Works on All Browsers"],
   },
   {
     icon: Server,
     title: "Backend Development",
-    description: "Robust server-side solutions with Node.js, Python, or PHP.",
-    features: ["RESTful & GraphQL APIs", "Database Design", "Authentication Systems", "Cloud Deployment"],
+    description: "The engine under the hood. We build systems that handle your data securely.",
+    features: ["Secure Data Handling", "Custom Features", "User Accounts", "Payment Processing"],
   },
   {
     icon: Layers,
-    title: "Full Stack Development",
-    description: "Complete end-to-end web applications from frontend to backend.",
-    features: ["Complete Web Apps", "Real-time Features", "Third-party Integrations", "Scalable Architecture"],
+    title: "Complete Web Apps",
+    description: "Full applications built from scratch — everything from login to checkout.",
+    features: ["All-in-One Solutions", "Real-Time Updates", "Third-Party Connections", "Built to Scale"],
   },
   {
     icon: FileCode,
     title: "Landing Pages",
-    description: "High-converting landing pages optimized for lead generation.",
-    features: ["A/B Testing Ready", "Fast Load Times", "SEO Optimized", "Analytics Integration"],
+    description: "One-page sites designed with one goal: get visitors to take action.",
+    features: ["High Conversion", "Lightning Fast", "SEO Ready", "Trackable Results"],
   },
   {
     icon: Palette,
-    title: "Portfolio Websites",
-    description: "Stunning portfolio sites that showcase your work professionally.",
-    features: ["Custom Animations", "Gallery Systems", "Contact Forms", "Blog Integration"],
+    title: "Portfolio Sites",
+    description: "Showcase your work professionally. Perfect for freelancers and creative agencies.",
+    features: ["Stunning Galleries", "Easy Updates", "Contact Forms", "Social Integration"],
   },
   {
     icon: Monitor,
-    title: "Business Websites",
-    description: "Professional corporate websites that build trust and credibility.",
-    features: ["Multi-page Layouts", "Team Sections", "Service Pages", "Testimonial Display"],
+    title: "Corporate Websites",
+    description: "Professional sites that build trust and credibility with potential clients.",
+    features: ["Team Pages", "Service Showcases", "Case Studies", "Client Testimonials"],
   },
 ];
 
@@ -248,14 +248,14 @@ const WebDevelopment = () => {
               transition={{ duration: 0.8 }}
             >
               <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-6">
-                Web Development
+                For Businesses That Want Results
               </span>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-                Build Powerful
-                <span className="block text-highlight">Digital Experiences</span>
+                Websites That
+                <span className="block text-highlight">Bring You Customers</span>
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
-                From simple websites to complex web applications, our expert developers create solutions that drive results and exceed expectations.
+                A pretty website is nice, but what you really need is a website that works — one that shows up on Google, loads fast on phones, and convinces visitors to contact you.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 {stats.map((stat, index) => (
