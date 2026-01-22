@@ -7,32 +7,32 @@ const services = [
   {
     icon: Search,
     title: "Search Engine Optimization",
-    description: "Improve your search rankings and drive organic traffic to your website.",
+    description: "Get found when people search for what you offer. We help you show up on Google so customers find you — not your competitors.",
   },
   {
     icon: Target,
-    title: "Pay-Per-Click Advertising",
-    description: "Targeted ad campaigns on Google, Bing, and social platforms.",
+    title: "Paid Advertising",
+    description: "Stop wasting money on ads that don't work. We create targeted campaigns on Google and Facebook that bring real customers.",
   },
   {
     icon: Mail,
     title: "Email Marketing",
-    description: "Automated email campaigns that nurture leads and drive conversions.",
+    description: "Turn your email list into a sales machine. We set up automated emails that nurture leads and bring them back to buy.",
   },
   {
     icon: BarChart3,
     title: "Analytics & Reporting",
-    description: "Data-driven insights with comprehensive monthly reporting.",
+    description: "Know exactly what's working and what's not. We give you clear reports you can actually understand — no confusing charts.",
   },
   {
     icon: Megaphone,
     title: "Content Marketing",
-    description: "Strategic content creation that attracts and engages your audience.",
+    description: "Attract customers with helpful content that answers their questions. Position yourself as the expert in your field.",
   },
   {
     icon: LineChart,
     title: "Conversion Optimization",
-    description: "A/B testing and UX improvements to maximize your ROI.",
+    description: "More visitors don't mean more sales if your website doesn't convert. We fix the leaks in your sales funnel.",
   },
 ];
 
@@ -45,41 +45,41 @@ const workTypes = [
   {
     icon: Rocket,
     title: "Growth Marketing",
-    description: "Full-funnel strategies to accelerate your business growth.",
-    features: ["Customer Acquisition", "Retention Strategies", "Viral Loops", "Referral Programs"],
+    description: "For businesses ready to scale fast. We build systems that bring in customers consistently.",
+    features: ["Customer Acquisition", "Retention Programs", "Referral Systems", "Lifetime Value Optimization"],
   },
   {
     icon: TrendingUp,
     title: "Performance Marketing",
-    description: "ROI-focused campaigns that deliver measurable results.",
-    features: ["Paid Search (PPC)", "Display Advertising", "Remarketing", "Conversion Tracking"],
+    description: "Every rupee tracked. We focus on campaigns where you see direct return on investment.",
+    features: ["Google Ads", "Facebook & Instagram Ads", "Retargeting", "Conversion Tracking"],
   },
   {
     icon: PieChart,
     title: "Marketing Analytics",
-    description: "Deep insights to optimize every marketing dollar spent.",
-    features: ["Custom Dashboards", "Attribution Modeling", "Funnel Analysis", "Competitor Analysis"],
+    description: "Make decisions based on data, not guesswork. We show you exactly where your money is going.",
+    features: ["Simple Dashboards", "What's Working Reports", "Competitor Insights", "Monthly Reviews"],
   },
 ];
 
 const results = [
   {
-    title: "SEO Campaign",
+    title: "Local Law Firm",
     client: "LegalExperts",
-    description: "Comprehensive SEO strategy for a law firm.",
-    metrics: ["500% increase in organic traffic", "Top 3 rankings for 50+ keywords", "200% increase in leads"],
+    description: "A small law firm struggling to get found online. Now ranks #1 for key legal terms in their city.",
+    metrics: ["5x more website visitors", "Top 3 on Google for 50+ searches", "Doubled their client inquiries"],
   },
   {
-    title: "PPC Campaign",
+    title: "Home Services Company",
     client: "HomeSolutions",
-    description: "Google Ads campaign for a home services company.",
-    metrics: ["400% ROAS", "Cost per lead reduced by 60%", "1000+ conversions in 6 months"],
+    description: "Wasting money on ads that didn't work. We rebuilt their campaigns from scratch.",
+    metrics: ["4x return on ad spend", "60% lower cost per lead", "1000+ new customer inquiries"],
   },
   {
-    title: "Email Marketing",
+    title: "Online Education Startup",
     client: "EduTech Pro",
-    description: "Automated email nurture sequence for an EdTech startup.",
-    metrics: ["45% open rate", "15% click-through rate", "30% conversion rate"],
+    description: "Had leads but couldn't convert them. We created an email sequence that nurtures and sells.",
+    metrics: ["45% email open rate", "3x more course enrollments", "Automated sales while they sleep"],
   },
 ];
 
@@ -138,14 +138,14 @@ const DigitalMarketing = () => {
               transition={{ duration: 0.8 }}
             >
               <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-6">
-                Digital Marketing
+                For Growing Businesses
               </span>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-                Data-Driven
-                <span className="block text-highlight">Marketing Excellence</span>
+                Stop Guessing.
+                <span className="block text-highlight">Start Growing.</span>
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
-                Strategic digital marketing solutions that deliver measurable results. From SEO to PPC, we help you reach the right audience at the right time.
+                Tired of spending money on marketing that doesn't work? We create clear, trackable campaigns that show you exactly where your customers come from — and bring you more of them.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 {stats.map((stat, index) => (

@@ -1,13 +1,12 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Clock, Send, Globe, Share2, BarChart3, Youtube, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, Globe, Share2, BarChart3, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { LampContainer } from "@/components/ui/lamp-effect";
 import webDevImg from "@/assets/web-dev.jpg";
 import socialMediaImg from "@/assets/social-media.jpg";
 import digitalMarketingImg from "@/assets/digital-marketing.jpg";
-import youtubeImg from "@/assets/youtube.jpg";
 
 const contactInfo = [
   {
@@ -36,7 +35,7 @@ const services = [
   { 
     id: 1, 
     title: "Web Development", 
-    description: "Custom websites & apps", 
+    description: "Websites that bring customers", 
     image: webDevImg, 
     link: "/web-development",
     icon: Globe
@@ -44,7 +43,7 @@ const services = [
   { 
     id: 2, 
     title: "Social Media", 
-    description: "Marketing strategies", 
+    description: "Content that converts followers", 
     image: socialMediaImg, 
     link: "/social-media-marketing",
     icon: Share2
@@ -52,18 +51,10 @@ const services = [
   { 
     id: 3, 
     title: "Digital Marketing", 
-    description: "Growth solutions", 
+    description: "Ads that actually work", 
     image: digitalMarketingImg, 
     link: "/digital-marketing",
     icon: BarChart3
-  },
-  { 
-    id: 4, 
-    title: "YouTube", 
-    description: "Video content & reviews", 
-    image: youtubeImg, 
-    link: "/youtube",
-    icon: Youtube
   },
 ];
 
@@ -112,14 +103,14 @@ const Contact = () => {
           className="text-center"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-6">
-            Contact Liklet
+            Let's Talk
           </span>
           <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground mb-6 bg-gradient-to-b from-primary-foreground to-primary-foreground/60 bg-clip-text text-transparent">
-            Let's Create Something
-            <span className="block text-highlight mt-2">Amazing Together</span>
+            Have a Question?
+            <span className="block text-highlight mt-2">We're Here to Help</span>
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto">
-            We're excited to hear about your project! Whether you have a question, need a quote, or just want to say hello – our team is ready to help you succeed.
+            Not sure what you need? That's okay. Tell us about your business and what you're trying to achieve — we'll help you figure out the best path forward. No pressure, just honest advice.
           </p>
         </motion.div>
       </LampContainer>
@@ -133,14 +124,14 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-accent font-medium">Our Services</span>
+              <span className="text-accent font-medium">What We Do</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
-                How Can We Help You?
+                What Are You Looking For?
               </h2>
             </motion.div>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -360,13 +351,13 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What Happens Next?
+              Here's What Happens After You Reach Out
             </h2>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               {[
-                { step: "1", title: "We Review", description: "Our team will review your message within 24 hours." },
-                { step: "2", title: "We Connect", description: "We'll schedule a call to discuss your requirements." },
-                { step: "3", title: "We Deliver", description: "We create a tailored proposal and start your project." },
+                { step: "1", title: "Quick Reply", description: "We'll get back to you within 24 hours — usually much faster." },
+                { step: "2", title: "Free Consultation", description: "A quick call to understand your business and goals. No sales pitch." },
+                { step: "3", title: "Clear Proposal", description: "If we're a good fit, you'll get a clear plan with honest pricing." },
               ].map((item, index) => (
                 <motion.div
                   key={item.step}

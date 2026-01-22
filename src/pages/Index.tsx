@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Palette, TrendingUp, Users, Play, CheckCircle, Star } from "lucide-react";
+import { ArrowRight, Code, TrendingUp, Users, CheckCircle, Star } from "lucide-react";
 import { SparklesCore } from "@/components/ui/sparkles";
 import heroBg from "@/assets/hero-bg.jpg";
 import webDevImg from "@/assets/web-dev.jpg";
@@ -11,28 +11,28 @@ const services = [
   {
     icon: Code,
     title: "Web Development",
-    description: "Custom websites and web applications built with cutting-edge technologies for optimal performance.",
+    description: "Get a website that actually brings you customers — fast, mobile-friendly, and built to convert visitors into leads.",
     link: "/web-development",
     image: webDevImg,
   },
   {
     icon: Users,
     title: "Social Media Marketing",
-    description: "Strategic social media campaigns that boost engagement and grow your online presence.",
+    description: "Stop posting into the void. We create content that gets noticed, builds your following, and turns followers into paying customers.",
     link: "/social-media-marketing",
     image: socialMediaImg,
   },
   {
     icon: TrendingUp,
     title: "Digital Marketing",
-    description: "Data-driven digital marketing strategies that deliver measurable results and ROI.",
+    description: "Tired of wasting money on ads that don't work? We create marketing campaigns that deliver real, measurable growth.",
     link: "/digital-marketing",
     image: digitalMarketingImg,
   },
 ];
 
 const stats = [
-  { value: "150+", label: "Projects Completed" },
+  { value: "150+", label: "Businesses Helped" },
   { value: "50+", label: "Happy Clients" },
   { value: "5+", label: "Years Experience" },
   { value: "98%", label: "Client Satisfaction" },
@@ -42,19 +42,19 @@ const testimonials = [
   {
     name: "Rajesh Kumar",
     company: "TechStart India",
-    content: "Liklet transformed our online presence. Their web development team delivered beyond expectations.",
+    content: "We struggled for years to get leads from our website. Within 3 months of working with Liklet, our inquiries doubled. They truly understand small business needs.",
     rating: 5,
   },
   {
     name: "Priya Sharma",
     company: "Fashion Forward",
-    content: "The social media marketing strategies increased our engagement by 300%. Highly recommended!",
+    content: "I was skeptical about social media marketing until Liklet took over. Our Instagram following grew by 10x and we're now getting orders directly from DMs!",
     rating: 5,
   },
   {
     name: "Amit Patel",
     company: "GrowthHub",
-    content: "Professional team with exceptional digital marketing expertise. Our ROI improved significantly.",
+    content: "Finally, a marketing team that speaks in results, not jargon. They showed us exactly where our money was going and the ROI we were getting.",
     rating: 5,
   },
 ];
@@ -94,25 +94,25 @@ const Index = () => {
             className="max-w-4xl mx-auto"
           >
             <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-6">
-              Welcome to Liklet
+              For Growing Businesses
             </span>
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-              Transforming Ideas Into
-              <span className="block text-highlight">Digital Excellence</span>
+              Your Business Deserves
+              <span className="block text-highlight">To Be Found Online</span>
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              We are a full-service digital agency specializing in web development, social media marketing, and digital strategies that drive growth.
+              We help startups, small businesses, and entrepreneurs get more customers through websites that convert, social media that engages, and marketing that actually works.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="btn-accent text-lg">
-                Start Your Project
+                Get a Free Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/about"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
               >
-                Learn More
+                See How We Work
               </Link>
             </div>
           </motion.div>
@@ -151,12 +151,12 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-accent font-medium">What We Do</span>
+              <span className="text-accent font-medium">How We Help</span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2">
-                Our Premium Services
+                Grow Your Business Online
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
-                Comprehensive digital solutions tailored to elevate your business to new heights.
+                Whether you're just starting out or ready to scale, we have the tools and expertise to help you succeed. No complicated tech talk — just real results.
               </p>
             </motion.div>
           </div>
@@ -200,7 +200,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Who We Help */}
       <section className="bg-card section-padding">
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -209,20 +209,20 @@ const Index = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-accent font-medium">Why Choose Liklet</span>
+              <span className="text-accent font-medium">Who We Help</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-                We Deliver Results That Matter
+                Built for Business Owners Like You
               </h2>
               <p className="text-muted-foreground mb-8">
-                At Liklet, we combine creativity with technology to create digital experiences that resonate with your audience and drive business growth.
+                You're busy running your business. You don't have time to figure out websites, social media algorithms, or Google Ads. That's where we come in — we handle your entire online presence so you can focus on what you do best.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Expert team with years of industry experience",
-                  "Customized solutions tailored to your needs",
-                  "Transparent communication throughout the project",
-                  "Ongoing support and maintenance",
-                  "Results-driven approach with measurable KPIs",
+                  "Startups ready to launch their first website",
+                  "Small businesses wanting more local customers",
+                  "E-commerce stores looking to increase sales",
+                  "Service providers needing consistent leads",
+                  "Entrepreneurs building their personal brand",
                 ].map((item, index) => (
                   <motion.li
                     key={index}
@@ -238,7 +238,7 @@ const Index = () => {
                 ))}
               </ul>
               <Link to="/about" className="btn-accent mt-8 inline-flex">
-                About Our Company
+                Learn About Our Approach
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </motion.div>
@@ -251,45 +251,52 @@ const Index = () => {
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
                   src={webDevImg}
-                  alt="Professional web development"
+                  alt="Business owner working with laptop"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-display font-bold">5+</div>
-                <div className="text-sm">Years of Excellence</div>
+                <div className="text-3xl font-display font-bold">150+</div>
+                <div className="text-sm">Businesses Helped</div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* YouTube Section */}
+      {/* Our Promise */}
       <section className="hero-gradient section-padding">
         <div className="container-max">
-          <div className="text-center mb-12">
+          <div className="text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-highlight font-medium">Our YouTube Channel</span>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mt-2">
-                Product Reviews & Insights
+              <span className="text-highlight font-medium">Our Promise</span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mt-2 mb-6">
+                What Makes Us Different
               </h2>
-              <p className="text-primary-foreground/80 max-w-2xl mx-auto mt-4">
-                Watch our comprehensive product reviews and stay updated with the latest tech insights.
-              </p>
+              <div className="grid md:grid-cols-3 gap-8 mt-12">
+                {[
+                  { title: "No Jargon", desc: "We explain everything in plain language. If you don't understand it, we'll make it clearer." },
+                  { title: "Real Results", desc: "We focus on what matters: more visitors, more leads, more customers. Not vanity metrics." },
+                  { title: "Your Partner", desc: "We're not a vendor — we're an extension of your team. Your success is our success." },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="text-center"
+                  >
+                    <h3 className="text-xl font-bold text-primary-foreground mb-2">{item.title}</h3>
+                    <p className="text-primary-foreground/80">{item.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
-          </div>
-          <div className="flex justify-center">
-            <Link
-              to="/youtube"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-primary-foreground text-primary font-medium hover:scale-105 transition-transform"
-            >
-              <Play className="w-6 h-6" />
-              Visit Our Channel
-            </Link>
           </div>
         </div>
       </section>
@@ -303,10 +310,13 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-accent font-medium">Testimonials</span>
+              <span className="text-accent font-medium">Real Stories</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
-                What Our Clients Say
+                Business Owners Like You
               </h2>
+              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+                Don't just take our word for it — hear from real clients who grew their businesses with our help.
+              </p>
             </motion.div>
           </div>
 
@@ -345,16 +355,16 @@ const Index = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-accent-foreground mb-4">
-              Ready to Transform Your Digital Presence?
+              Ready to Get More Customers?
             </h2>
             <p className="text-accent-foreground/80 max-w-2xl mx-auto mb-8">
-              Let's discuss how Liklet can help you achieve your business goals with our expert digital solutions.
+              Let's have a conversation about your business goals. No pressure, no sales pitch — just honest advice on how we can help you grow.
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-primary-foreground text-primary font-medium hover:scale-105 transition-transform"
             >
-              Get in Touch
+              Book a Free Consultation
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>
