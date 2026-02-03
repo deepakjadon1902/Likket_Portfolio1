@@ -678,7 +678,7 @@ const SocialMediaMarketing = () => {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="src\assets\social-media.jpg"
+                  src="/images/social-media.jpg"
                   alt="Social media marketing"
                   className="w-full h-full object-cover"
                 />
