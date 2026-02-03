@@ -12,7 +12,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Our Office",
-    details: ["123 Business Avenue, Tech Park", "Digital City - 400001", "India"],
+    details: ["Virndavan, Uttar Pradesh", "281121", "India"],
   },
   {
     icon: Phone,
@@ -22,7 +22,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["info@liklet.com", "support@liklet.com"],
+    details: [ "support@liklet.com"],
   },
   {
     icon: Clock,
@@ -65,6 +65,7 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
+    company: "",
     address: "",
     message: "",
   });
@@ -77,13 +78,33 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission (EmailJS would be integrated here)
+    // Construct WhatsApp message
+    const whatsappNumber = "919634359003"; // Replace with your company WhatsApp number
+    const whatsappMessage = `*New Contact Form Submission - Liklet*
+
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+${formData.company ? `*Company:* ${formData.company}` : ""}
+${formData.address ? `*Address:* ${formData.address}` : ""}
+
+*Message:*
+${formData.message}`;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Open WhatsApp with the message
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, '_blank');
+
+    // Show success message
     setTimeout(() => {
       toast({
         title: "Message Sent Successfully!",
         description: "Thank you for contacting us. We'll get back to you within 24 hours.",
       });
-      setFormData({ name: "", email: "", phone: "", address: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", company: "", address: "", message: "" });
       setIsSubmitting(false);
     }, 1500);
   };
@@ -287,19 +308,35 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="address" className="block text-sm font-medium text-foreground mb-2">
-                      Address
-                    </label>
-                    <input
-                      type="text"
-                      id="address"
-                      name="address"
-                      value={formData.address}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
-                      placeholder="Your address"
-                    />
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+                        Company Name
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                        placeholder="Your company name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="address" className="block text-sm font-medium text-foreground mb-2">
+                        Address
+                      </label>
+                      <input
+                        type="text"
+                        id="address"
+                        name="address"
+                        value={formData.address}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                        placeholder="Your address"
+                      />
+                    </div>
                   </div>
 
                   <div>

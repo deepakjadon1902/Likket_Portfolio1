@@ -9,10 +9,14 @@ const Footer = () => {
       <div className="container-max section-padding !pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
-          <div className="space-y-4">
+         <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-xl">L</span>
+              <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-white">
+                <img 
+                  src="/images/logo.jpg" 
+                  alt="Liklet Logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="font-display text-2xl font-bold">Liklet</span>
             </div>
@@ -96,7 +100,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-accent" />
                 <span className="text-primary-foreground/80">
-                  123 Business Avenue, Tech Park, Digital City - 400001
+                 Virndavan, Uttar Pradesh, India
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -108,7 +112,7 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent" />
                 <a href="mailto:info@liklet.com" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                  info@liklet.com
+                  support@liklet.com
                 </a>
               </li>
             </ul>

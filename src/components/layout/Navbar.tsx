@@ -67,15 +67,19 @@ const Navbar = () => {
                 scale: 1.1,
               }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
-              className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-accent via-highlight to-accent flex items-center justify-center shadow-lg"
+              className="relative w-12 h-12 rounded-full bg-gradient-to-br from-accent via-highlight to-accent flex items-center justify-center shadow-lg overflow-hidden"
               style={{
                 transformStyle: "preserve-3d",
                 boxShadow: "0 10px 30px -10px hsl(210 100% 45% / 0.5)",
               }}
             >
-              <span className="text-accent-foreground font-display font-bold text-2xl">L</span>
+              <img 
+                src="/images/logo.jpg" 
+                alt="Liklet Logo" 
+                className="w-10 h-10 object-cover rounded-full z-10"
+              />
               <motion.div
-                className="absolute inset-0 rounded-xl bg-gradient-to-br from-highlight/50 to-transparent"
+                className="absolute inset-0 rounded-full bg-gradient-to-br from-highlight/50 to-transparent"
                 animate={{
                   opacity: [0.5, 0.8, 0.5],
                 }}
@@ -85,7 +89,7 @@ const Navbar = () => {
                   ease: "easeInOut",
                 }}
               />
-              <Sparkles className="absolute -top-1 -right-1 w-4 h-4 text-highlight animate-pulse" />
+              <Sparkles className="absolute -top-1 -right-1 w-4 h-4 text-highlight animate-pulse z-20" />
             </motion.div>
             <motion.span
               className={`font-display text-2xl font-bold transition-colors duration-300 ${
