@@ -17,7 +17,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+91 123 456 7890", "+91 987 654 3210"],
+    details: ["+91 9634359003"],
   },
   {
     icon: Mail,
@@ -236,7 +236,7 @@ ${formData.message}`;
               {/* Map placeholder */}
               <div className="mt-8 aspect-video rounded-xl overflow-hidden bg-secondary">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8939017672096!2d72.8776559!3d19.1075737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzI3LjMiTiA3MsKwNTInMzkuNiJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.123456789012!2d77.6593!3d27.5650!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDMzJzU0LjAiTiA3N8KwMzknMzMuNSJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
